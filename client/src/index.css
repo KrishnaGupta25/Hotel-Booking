@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@import "tailwindcss";
+
+/* 
+  @theme CSS ka default feature nahi hai — iska matlab hota hai:
+"Hum ek theme define kar rahe hain — jaise colors, fonts, spacing — jo baaki style mein use hogi."
+*/
+@theme{
+  --color-primary: #2663EB;
+  --color-secondary: #FBBF24;
+}
+
+/* 
+  * ka matlab hota hai "sabhi elements". 
+  Iska use karke hum poore page ke saare text elements ka font set kar rahe hain.
+*/
+* {
+  font-family: Outfit; /* Default font har element ke liye "Outfit" rakha gaya hai */
+}
+
+/*
+  .font-playfair ek class hai.
+  Iska matlab: jinke paas class="font-playfair" hoga, unka font alag hoga.
+*/
+.font-playfair {
+  font-family: Playfair !important; /* 
+    "Playfair" font lagaya gaya hai is class ke elements pe. 
+    !important likhne se ye rule sabse zyada priority pe aata hai.
+    Chahe pehle koi aur font laga ho, ye usko override kar dega.
+  */
+}
+
